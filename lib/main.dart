@@ -3,7 +3,7 @@ import 'package:flutter_demo/page/bottom/airplaypage.dart';
 import 'package:flutter_demo/page/bottom/categorypage.dart';
 import 'package:flutter_demo/page/bottom/emailpage.dart';
 import 'package:flutter_demo/page/bottom/homepage.dart';
-import 'package:flutter_demo/page/bottom_appBar_demo.dart';
+import 'package:flutter_demo/page/bottom_appbar_demo.dart';
 
 void main() => runApp(MyApp());
 

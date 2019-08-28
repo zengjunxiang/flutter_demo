@@ -1,5 +1,6 @@
-import 'each_view.dart';
 import 'package:flutter/material.dart';
+import 'each_view.dart';
+
 
 class BottomAppBarDemo extends StatefulWidget {
   _BottomAppBarDemoState createState() => _BottomAppBarDemoState();
@@ -7,6 +8,23 @@ class BottomAppBarDemo extends StatefulWidget {
 
 class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
 
+
+  List<Widget> _eachView;  //创建视图数组
+  int _index = 0;          //数组索引，通过改变索引值改变视图
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+
+    _eachView = List();
+    
+    _eachView
+    ..add(EachView('Home'))
+    ..add(EachView('Me'));
+
+    super.initState();
+  }
 
 
   @override
@@ -16,6 +34,10 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
         floatingActionButton: FloatingActionButton(
           onPressed: (){
 
+            //打开一个新页面
+            Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
+              return EachView('New Page');
+            }));
           },
 
           tooltip: 'Increment',
@@ -56,3 +78,4 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
   }
 
 }
+
