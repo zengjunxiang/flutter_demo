@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/page/bottom/airplaypage.dart';
-import 'package:flutter_demo/page/bottom/categorypage.dart';
-import 'package:flutter_demo/page/bottom/emailpage.dart';
-import 'package:flutter_demo/page/bottom/homepage.dart';
-import 'package:flutter_demo/page/bottom_appbar_demo.dart';
+import 'package:flutter_demo/page/lrregularbuttom/bottom_appbar_demo.dart';
+import 'package:flutter_demo/page/rulebottom/airplaypage.dart';
+import 'package:flutter_demo/page/rulebottom/categorypage.dart';
+import 'package:flutter_demo/page/rulebottom/emailpage.dart';
+import 'package:flutter_demo/page/rulebottom/homepage.dart';
+import 'package:flutter_demo/page/pages.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: '底部导航的制作',
       // home: BottomNaivgationWidget(),
-      home: BottomAppBarDemo(),
+      home: FisrtPage(),
 
       theme: ThemeData(
         primarySwatch: Colors.lightBlue,

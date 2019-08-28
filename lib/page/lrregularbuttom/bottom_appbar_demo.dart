@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'each_view.dart';
+import 'package:flutter_demo/page/lrregularbuttom/each_view.dart';
 
 
 class BottomAppBarDemo extends StatefulWidget {
