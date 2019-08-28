@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'page/airplaypage.dart';
-import 'page/categorypage.dart';
-import 'page/emailpage.dart';
-import 'page/homepage.dart';
+import 'package:flutter_demo/page/bottom/airplaypage.dart';
+import 'package:flutter_demo/page/bottom/categorypage.dart';
+import 'package:flutter_demo/page/bottom/emailpage.dart';
+import 'package:flutter_demo/page/bottom/homepage.dart';
+import 'package:flutter_demo/page/bottom_appBar_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,13 +13,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '底部导航的制作',
-      home: BottomNaivgationWidget(),
+      // home: BottomNaivgationWidget(),
+      home: BottomAppBarDemo(),
+
+      theme: ThemeData(
+        primarySwatch: Colors.lightBlue,
+      ),
     );
 
   }
 }
 
 
+//　BottomNaivgationWidget
 class BottomNaivgationWidget extends StatefulWidget{
 
   _BottomNavigationWidgetState createState() => _BottomNavigationWidgetState();
@@ -41,7 +48,6 @@ class _BottomNavigationWidgetState extends State<BottomNaivgationWidget> {
       ..add(EmailPage())
       ..add(CategoryPage())
       ..add(AirplayPage());
-
     super.initState();
   }
 
@@ -111,4 +117,8 @@ class _BottomNavigationWidgetState extends State<BottomNaivgationWidget> {
     );
   }
 }
+
+
+
+
 
