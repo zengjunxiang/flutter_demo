@@ -31,6 +31,9 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+
+        body: _eachView[_index],
+
         floatingActionButton: FloatingActionButton(
           onPressed: (){
 
@@ -38,6 +41,8 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
             Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
               return EachView('New Page');
             }));
+
+
           },
 
           tooltip: 'Increment',
@@ -61,7 +66,9 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
                 icon: Icon(Icons.home),
                 color: Colors.white,
                 onPressed: (){
-
+                  setState(() {
+                    _index = 0;
+                  });
                 },
               ),
               IconButton(
@@ -69,11 +76,17 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
                 color: Colors.white,
                 onPressed: (){
 
+                  setState(() {
+                    _index = 1;
+                  });
+
                 },
               )
             ],
           ),
         )
+
+
     );
   }
 
