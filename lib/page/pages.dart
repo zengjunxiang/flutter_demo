@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/page/custome_router.dart';
 
 class FisrtPage extends StatelessWidget{
 
@@ -21,11 +22,15 @@ class FisrtPage extends StatelessWidget{
               size:64.0,
             ),
             onPressed: (){
-              Navigator.of(context).push(
-                  MaterialPageRoute(
-                      builder:(BuildContext context){
-                        return SecondPage();
-                      }));
+//              Navigator.of(context).push(
+//                  MaterialPageRoute(
+//                      builder:(BuildContext context){
+//                        return SecondPage();
+//                      }));
+
+            Navigator.of(context).push(CustomRoute(SecondPage()));
+
+
             },
           ),
         )
